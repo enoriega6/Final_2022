@@ -120,6 +120,13 @@ This graph shows that 45% of those in the LGBTQ group that received the vaccine 
 
 ###Numerical 
 
+```{r}
+table1 <- xtabs(~infected + treatment, data=lgbtqdata)
+rowPerc(table1)
+colPerc(table1)
+```
+According to the numerical data, among the LGBTQ that contracted Covid91 55.56% received the placebo, and 44.44% of LGBTQ received the treatment. The data demonstrates the treatment is effective for LGBTQ.
+
 
 ###Inferential
 
