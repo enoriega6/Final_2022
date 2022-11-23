@@ -130,7 +130,15 @@ According to the numerical data, among the LGBTQ that contracted Covid91 55.56% 
 
 ###Inferential
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
+Chi Squared test has a p-value of 0.004136 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does have an effect on females. The Fisher's Test has a p-value of 0.003736 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does have an effect on LGBTQ.
+
+LGBTQ who received the placebo are 1.25 times more likely to contract Covid91 than LGBTQ who received the treatment.
 
 ###Discussion and Conclusion
 
