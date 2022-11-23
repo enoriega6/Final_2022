@@ -140,8 +140,8 @@ Chi Squared test has a p-value of 0.004136 which is less than 0.05 meaning we re
 
 LGBTQ who received the placebo are 1.25 times more likely to contract Covid91 than LGBTQ who received the treatment.
 
-###Discussion and Conclusion
-
+###Discussion and Conclusion  
+Based on the data above, among the LGBTQ who contracted Covid91 55.56% received the placebo and 44.44% received the treatment. According to the data, among the LGBTQ who received the placebo, the odds are that they are 1.25 times more likely to contract Covid91 than females who received the treatment.
 
 
 
