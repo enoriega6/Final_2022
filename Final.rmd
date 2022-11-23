@@ -104,6 +104,31 @@ Based on the data above, among the females who contracted Covid91 42.82% receive
 
 ## LGBTQ
 
+```{r}
+lgbtqdata=filter(FinalData,LGBTQ==LGBTQ)
+```
+
+$H_0$: The treatment has no effect on the LGBTQ community.   
+$H_A$: The treatment has a significant effect on the LGBTQ community.
+
+##Graphical
+```{r}
+barchartGC(~infected + treatment,data=lgbtqdata)
+barchartGC(~infected + treatment,data=lgbtqdata, type="percent")
+```
+This graph shows that 45% of those in the LGBTQ group that received the vaccine still were infected. Compared to those that got the placebo, close to 60% got infected. The differences seems to be about 15% between the two,therefore it is effective.
+
+###Numerical 
+
+
+###Inferential
+
+
+
+###Discussion and Conclusion
+
+
+
 
 
 ## Druggies
