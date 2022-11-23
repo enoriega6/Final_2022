@@ -37,6 +37,8 @@ $H_A$: The treatment has a significant effect on males.
 barchartGC(~infected + treatment,data=malesdata)
 barchartGC(~infected + treatment,data=malesdata, type="percent")
 ```
+
+
 Based on the graph above, among the men who contracted Covid19 about twice as many males that received the placebo as received the Covid19 treatment. The graph suggest that the treatment is effective for males.
 
 ### Numerical Description
@@ -57,15 +59,27 @@ fisher.test(table1)
 
 Chi Squared test has a p-value of 0.000000000005307 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does have an effect on males.The Fisher's Test has a p-value of 0.000000000002364 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does have an effect on males. Males who received the placebo are 2.18 times more likely to contract Covid91 than males who received the treatment.
 
-### Discussion and Conclusion
+### Discussion and Conclusion  
 
 Based on the data above, among the males who contracted Covid91 68.44% received the placebo and 31.56% received the treatment. According to the data, among the males who received the placebo, the odds are that they are 2.18 times more likely to contract Covid91 than males who received the treatment.
 
 
-## Females
+## Females  
 ```{r}
 femalesdata=filter(FinalData,sex=="F")
 ```
+
+$H_0$: The treatment has no effect on females.  
+$H_A$: The treatment has a significant effect on females.
+### Graphical Description
+```{r}
+barchartGC(~infected + treatment,data=femalesdata)
+barchartGC(~infected + treatment,data=femalesdata, type="percent")
+```
+
+Based on the graph above, among the females who contracted Covid91 about 15% more of them received the Covid91 treatment as received the placebo. The graph suggest that the treatment is not effective for females.
+
+##Numerical Description
 
 ## LGBTQ
 
