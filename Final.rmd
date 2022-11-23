@@ -25,10 +25,33 @@ mutate(across(where(is.character), as.factor))
 A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
 ## Males
+```{r}
+malesdata=filter(FinalData,sex=="M")
+```
 
+$H_0$: The treatment has no effect on males.  
+$H_A$: The treatment has a significant effect on males.
+
+### Graphical Description
+```{r}
+barchartGC(~infected + treatment,data=malesdata)
+barchartGC(~infected + treatment,data=malesdata, type="percent")
+```
+Based on the graph above, among the men who contracted Covid19 about twice as many males that received the placebo as received the Covid19 treatment. The graph suggest that the treatment is effective for males.
+
+### Numerical Description
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=malesdata)
+rowPerc(table1)
+colPerc(table1)
+```
+According to the numerical data, among the males that contracted Covid91 68.44% received the placebo, and 31.56% of males received the treatment. The data demonstrates the treatment is effective for males.
 
 ## Females
-
+```{r}
+femalesdata=filter(FinalData,sex=="F")
+```
 
 ## LGBTQ
 
