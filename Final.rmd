@@ -1,6 +1,6 @@
 ---
 title: "Covid91 vaccine study FinalFall2022"
-author: "Eduard Noriega"
+author: "Eduardo Noriega"
 output: 
   html_document:
     number_sections: true
