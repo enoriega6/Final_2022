@@ -116,6 +116,8 @@ $H_A$: The treatment has a significant effect on the LGBTQ community.
 barchartGC(~infected + treatment,data=lgbtqdata)
 barchartGC(~infected + treatment,data=lgbtqdata, type="percent")
 ```
+
+
 This graph shows that just above 80% of those in the LGBTQ group that received the vaccine still were infected. Compared to those that got the placebo, close to 18% got infected. The differences seems to be about 72% between the two,therefore it is not effective.
 
 ###Numerical 
@@ -159,6 +161,8 @@ $H_A$: The treatment has a significant effect on drug users.
 barchartGC(~infected + treatment,data=druggiesdata)
 barchartGC(~infected + treatment,data=druggiesdata, type="percent")
 ```
+
+
 The graph shows that drug users had about a 45% infection with the treatment versus those with the placebo who only got about 55% who were infected.
 
 ###Numerical
@@ -169,7 +173,24 @@ table1 <- xtabs(~infected + treatment, data=druggiesdata)
 rowPerc(table1)
 colPerc(table1)
 ```
+###Inferential
 
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+  
+Chi Squared test has a p-value of 0.000001419 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does have an effect on females. The Fisher's Test has a p-value of 0.0000003119 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does not have an effect on drug users.  
+
+Drug Users who received the placebo are 0.21 times more likely to contract Covid91 than drug users who received the treatment.
+
+###Discussions and Conclusions
+Based on the data above, among the Druggies (or drug users) who contracted Covid19 16.67% received the placebo and 83.33% received the treatment. According to the data, among the druggies who received the placebo, the odds are that they are 0.21 times more likely to contract Covid19 than druggies who received the treatment. We reject the null hypothesis. We conclude that the treatment does not have an effect on druggies
 
 
 # Overall Results and Conclusions
+
+Overall it suggest that the treatment is effective only for males, not effective for females,does not have an effect on LGBTQ, and finally it did not have an effect on drug users.
