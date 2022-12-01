@@ -48,7 +48,7 @@ table1 <- xtabs(~infected + treatment, data=malesdata)
 rowPerc(table1)
 colPerc(table1)
 ```
-According to the numerical data, among the males that contracted Covid91 68.44% received the placebo, and 31.56% of males received the treatment. The data demonstrates the treatment is effective for males.
+According to the numerical data, among the males that contracted Covid19 68.44% received the placebo, and 31.56% of males received the treatment. The data demonstrates the treatment is effective for males.
 
 ### Inferential Results  
 ```{r}
@@ -61,7 +61,7 @@ Chi Squared test has a p-value of 0.000000000005307 which is less than 0.05 mean
 
 ### Discussion and Conclusion  
 
-Based on the data above, among the males who contracted Covid91 68.44% received the placebo and 31.56% received the treatment. According to the data, among the males who received the placebo, the odds are that they are 2.18 times more likely to contract Covid91 than males who received the treatment.
+Based on the data above, among the males who contracted Covid19 68.44% received the placebo and 31.56% received the treatment. According to the data, among the males who received the placebo, the odds are that they are 2.18 times more likely to contract Covid91 than males who received the treatment.
 
 
 ## Females  
@@ -77,7 +77,7 @@ barchartGC(~infected + treatment,data=femalesdata)
 barchartGC(~infected + treatment,data=femalesdata, type="percent")
 ```
 
-Based on the graph above, among the females who contracted Covid91 about 15% more of them received the Covid91 treatment as received the placebo. The graph suggest that the treatment is not effective for females.
+Based on the graph above, among the females who contracted Covid19 about 15% more of them received the Covid19 treatment as received the placebo. The graph suggest that the treatment is not effective for females.
 
 ##Numerical Description
 
@@ -97,10 +97,10 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-Chi Squared test has a p-value of 0.005747 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does have an effect on females. The Fisher's Test has a p-value of 0.004887 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does have an effect on females.Females who received the placebo are 0.74 times more likely to contract Covid91 than females who received the treatment.
+Chi Squared test has a p-value of 0.005747 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does have an effect on females making them more susceptible to contracting Covid91. The Fisher's Test has a p-value of 0.004887 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does have an effect on females.Females who received the placebo are 0.74 times as likely to contract Covid91 than females who received the treatment.
 
 ### Discussion and Conclusion
-Based on the data above, among the females who contracted Covid91 42.82% received the placebo and 57.18% received the treatment. According to the data, among the females who received the placebo, the odds are that they are 0.74 times more likely to contract Covid91 than females who received the treatment.
+Based on the data above, among the females who contracted Covid91 42.82% received the placebo and 57.18% received the treatment. According to the data, among the females who received the placebo, the odds are that they are 0.74 times as likely to contract Covid91 than females who received the treatment,meaning yes the treatment has a negative effect. Therefore, we reject the null hypothesis.
 
 ## LGBTQ
 
@@ -138,12 +138,12 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-Chi Squared test has a p-value of 0.000001104 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does have an effect on females. The Fisher's Test has a p-value of 0.00000001244 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does not have an effect on LGBTQ.
+Chi Squared test has a p-value of 0.000001104 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does have an effect on LGBTQ community. The Fisher's Test has a p-value of 0.00000001244 which is less than 0.05 meaning we reject the null hypothesis. We conclude that the treatment does have an effect on LGBTQ community.
 
-LGBTQ who received the placebo are 0.16 times more likely to contract Covid91 than LGBTQ who received the treatment.
+LGBTQ who received the placebo are 0.16 times as likely to contract Covid91 than LGBTQ who received the treatment. Meaning the treatment has a negative effect on LGBTQ community.
 
 ###Discussion and Conclusion  
-Based on the data above, among the LGBTQ who contracted Covid91 13.33% received the placebo and 86.67% received the treatment. According to the data, among the LGBTQ who received the placebo, the odds are that they are 0.16 times more likely to contract Covid91 than LGBTQ who received the treatment. We reject the null hypothesis. We conclude that the treatment does not have an effect on LGBTQ.
+Based on the data above, among the LGBTQ who contracted Covid91 13.33% received the placebo and 86.67% received the treatment. According to the data, among the LGBTQ who received the placebo, the odds are that they are 0.16 times more likely to contract Covid91 than LGBTQ who received the treatment. We reject the null hypothesis, since the treatment has a significant negative effect on the LGBTQ since it makes them more susceptible to contract Covid91.
 
 
 ## Druggies
